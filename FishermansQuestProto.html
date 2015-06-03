@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title> Fisherman's Quest </title>
+	<style type = 'text/css'>
+		canvas { border: 1px solid black; }
+	</style>
+</head>
+<body>
+	<h1>Fish on!</h1>
+	<canvas id='canvas' width='800' height='600'></canvas>
+	<script type='text/javascript'>
+		var ctx;
+		
+		
+		var fin = { x: 400, y:300, w: 20, h:20, dx: 5, dy:5, color: "#FF0000" };
+		
+		
+		var left = false;
+		var right = false;
+		var up = false;
+		var down = false;
+		
+		var areaR = 0;
+		var areaC = 0;
+		
+		
+		
+		
+		
+		function draw() {
+			ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+			if ( areaR == 0 && areaC == 0 )
+				A1();
+			else if ( areaR == 1 && areaC == 0 )
+				A2();
+			else if ( areaR == 2 && areaC == 0 )
+				A3();
+			else if ( areaR == 3 && areaC == 0 )
+				A4();
+			else if ( areaR == 4 && areaC == 0 )
+				A5();
+			else if ( areaR == 5 && areaC == 0 )
+				A6();
+			else if ( areaR == 6 && areaC == 0 )
+				A7();
+				
+			else if ( areaR == 0 && areaC == 1 )
+				B1();
+			else if ( areaR == 1 && areaC == 1 )
+				B2();
+			else if ( areaR == 2 && areaC == 1 )
+				B3();
+			else if ( areaR == 3 && areaC == 1 )
+				B4();
+			else if ( areaR == 4 && areaC == 1 )
+				B5();
+			else if ( areaR == 5 && areaC == 1 )
+				B6();
+			else if ( areaR == 6 && areaC == 1 )
+				B7();
+			
+			else if ( areaR == 0 && areaC == 2 )
+				C1();
+			else if ( areaR == 1 && areaC == 2 )
+				C2();
+			else if ( areaR == 2 && areaC == 2 )
+				C3();
+			else if ( areaR == 3 && areaC == 2 )
+				C4();
+			else if ( areaR == 4 && areaC == 2 )
+				C5();
+			else if ( areaR == 5 && areaC == 2 )
+				C6();
+			else if ( areaR == 6 && areaC == 2 )
+				C7();
+			
+			else if ( areaR == 0 && areaC == 3 )
+				D1();
+			else if ( areaR == 1 && areaC == 3 )
+				D2();
+			else if ( areaR == 2 && areaC == 3 )
+				D3();
+			else if ( areaR == 3 && areaC == 3 )
+				D4();
+			else if ( areaR == 4 && areaC == 3 )
+				D5();
+			else if ( areaR == 5 && areaC == 3 )
+				D6();
+			else if ( areaR == 6 && areaC == 3 )
+				D7();
+				
+			else if ( areaR == 0 && areaC == 4 )
+				E1();
+			else if ( areaR == 1 && areaC == 4 )
+				E2();
+			else if ( areaR == 2 && areaC == 4 )
+				E3();
+			else if ( areaR == 3 && areaC == 4 )
+				E4();
+			else if ( areaR == 4 && areaC == 4 )
+				E5();
+			else if ( areaR == 5 && areaC == 4 )
+				E6();
+			else if ( areaR == 6 && areaC == 4 )
+				E7();
+				
+			else if ( areaR == 0 && areaC == 5 )
+				F1();
+			else if ( areaR == 1 && areaC == 5 )
+				F2();
+			else if ( areaR == 2 && areaC == 5 )
+				F3();
+			else if ( areaR == 3 && areaC == 5 )
+				F4();
+			else if ( areaR == 4 && areaC == 5 )
+				F5();
+			else if ( areaR == 5 && areaC == 5 )
+				F6();
+			else if ( areaR == 6 && areaC == 5 )
+				F7();
+				
+			else if ( areaR == 0 && areaC == 6 )
+				G1();
+			else if ( areaR == 1 && areaC == 6 )
+				G2();
+			else if ( areaR == 2 && areaC == 6 )
+				G3();
+			else if ( areaR == 3 && areaC == 6 )
+				G4();
+			else if ( areaR == 4 && areaC == 6 )
+				G5();
+			else if ( areaR == 5 && areaC == 6 )
+				G6();
+			else if ( areaR == 6 && areaC == 6 )
+				G7();
+				
+			
+			ctx.fillStyle = fin.color;
+			ctx.fillRect(fin.x, fin.y, fin.w, fin.h);
+		}
+		
+		function A1(){
+			ctx.fillStyle = "#0000FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function A2(){
+			ctx.fillStyle = "#0015FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function A3(){
+			ctx.fillStyle = "#0030FF";;
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function A4(){
+			ctx.fillStyle = "#0045FF";;
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function A5(){
+			ctx.fillStyle = "#0060FF";;
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function A6(){
+			ctx.fillStyle = "#0075FF";;
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function A7(){
+			ctx.fillStyle = "#0090FF";;
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		
+		function B1(){
+			ctx.fillStyle = "#1500FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function B2(){
+			ctx.fillStyle = "#1515FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function B3(){
+			ctx.fillStyle = "#1530FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function B4(){
+			ctx.fillStyle = "#1545FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function B5(){
+			ctx.fillStyle = "#1560FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function B6(){
+			ctx.fillStyle = "#1575FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function B7(){
+			ctx.fillStyle = "#1590FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		
+		function C1(){
+			ctx.fillStyle = "#3000FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function C2(){
+			ctx.fillStyle = "#3015FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function C3(){
+			ctx.fillStyle = "#3030FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function C4(){
+			ctx.fillStyle = "#3045FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function C5(){
+			ctx.fillStyle = "#3060FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function C6(){
+			ctx.fillStyle = "#3075FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function C7(){
+			ctx.fillStyle = "#3090FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function D1(){
+			ctx.fillStyle = "#4500FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function D2(){
+			ctx.fillStyle = "#4515FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function D3(){
+			ctx.fillStyle = "#4530FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function D4(){
+			ctx.fillStyle = "#4545FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function D5(){
+			ctx.fillStyle = "#4560FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function D6(){
+			ctx.fillStyle = "#4575FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function D7(){
+			ctx.fillStyle = "#4590FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function E1(){
+			ctx.fillStyle = "#6000FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function E2(){
+			ctx.fillStyle = "#6015FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function E3(){
+			ctx.fillStyle = "#6030FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function E4(){
+			ctx.fillStyle = "#6045FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function E5(){
+			ctx.fillStyle = "#6060FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function E6(){
+			ctx.fillStyle = "#6075FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function E7(){
+			ctx.fillStyle = "#6090FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function F1(){
+			ctx.fillStyle = "#7500FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function F2(){
+			ctx.fillStyle = "#7515FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function F3(){
+			ctx.fillStyle = "#7530FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function F4(){
+			ctx.fillStyle = "#7545FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function F5(){
+			ctx.fillStyle = "#7560FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function F6(){
+			ctx.fillStyle = "#7575FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function F7(){
+			ctx.fillStyle = "#7590FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		
+		function G1(){
+			ctx.fillStyle = "#9000FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function G2(){
+			ctx.fillStyle = "#9015FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function G3(){
+			ctx.fillStyle = "#9030FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function G4(){
+			ctx.fillStyle = "#9045FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function G5(){
+			ctx.fillStyle = "#9060FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function G6(){
+			ctx.fillStyle = "#9075FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function G7(){
+			ctx.fillStyle = "#9090FF";
+			ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+		
+		function update() {
+			var orig = { x: fin.x, y: fin.y};
+			
+			if (up)
+				fin.y -= fin.dy;
+			if (down)
+				fin.y += fin.dy;
+			if (left)
+				fin.x -= fin.dx;
+			if (right)
+				fin.x += fin.dx;
+				
+			if(fin.x < 0){
+				if(areaR > 0){
+					areaR--;
+					fin.x = ctx.canvas.width - fin.w;
+				}
+				else
+					fin.x = 0;
+			}
+			else if (fin.x + fin.w > ctx.canvas.width ){
+				if(areaR < 6){
+					areaR++;
+					fin.x = 0;
+				}
+				else
+					fin.x = ctx.canvas.width - fin.w;
+			}
+			if ( fin.y < 0 ){
+				if(areaC > 0){
+					areaC--;
+					fin.y = ctx.canvas.height - fin.h;
+				}
+				else
+					fin.y = 0;
+			}
+			else if (fin.y + fin.h > ctx.canvas.height){
+				if(areaC < 6){
+					areaC++;
+					fin.y = 0;
+				}
+				else
+					fin.y = ctx.canvas.height - fin.h;
+			}	
+		}
+		
+		var KEY_UP = 38, KEY_DOWN=40,KEY_LEFT=37,KEY_RIGHT=39;
+		
+		function handleKeyDown(evt) {
+			if ( evt.keyCode == KEY_UP)
+				up = true;
+			if ( evt.keyCode == KEY_DOWN)
+				down = true;
+			if ( evt.keyCode == KEY_LEFT)
+				left = true;
+			if ( evt.keyCode == KEY_RIGHT)
+				right = true;
+			
+			if( 37 <= evt.keyCode && evt.keyCode <= 40)
+				evt.preventDefault();
+		}
+		
+		function handleKeyUp(evt) {
+			if ( evt.keyCode == KEY_UP)
+				up = false;
+			if ( evt.keyCode == KEY_DOWN)
+				down = false;
+			if ( evt.keyCode == KEY_LEFT)
+				left = false;
+			if ( evt.keyCode == KEY_RIGHT)
+				right = false;
+			
+			if( 37 <= evt.keyCode && evt.keyCode <= 40)
+				evt.preventDefault();
+		}
+		
+		
+		function main() {
+			ctx = document.getElementById('canvas').getContext("2d");
+			document.addEventListener('keydown', handleKeyDown);
+			document.addEventListener('keyup', handleKeyUp);
+			setInterval(function() { update(); draw(ctx); }, 1000/60);
+		}
+		main();
+		
+		
+	</script>
+</body>
+</html>
